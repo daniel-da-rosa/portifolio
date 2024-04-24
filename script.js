@@ -8,9 +8,16 @@ const textArea      = document.querySelector('.app__form-textarea')
 const ulTarefas     = document.querySelector('.app__section-task-list')
 const tarefaAtiva   = document.querySelector('.app__section-active-task-description')
 
-let tarefas       =  []
 let tarefaSelecionada   = null
 let liTarefaSelecionada = null
+let tarefas = []
+
+// Verifica se há dados no localStorage antes de atribuir a 'tarefas'
+const tarefasArmazenadas = localStorage.getItem('tarefas')
+if (tarefasArmazenadas) {
+    tarefas = JSON.parse(tarefasArmazenadas)
+}
+
 
 tarefas = JSON.parse(localStorage.getItem('tarefas'))
 
