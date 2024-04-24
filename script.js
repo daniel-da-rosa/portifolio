@@ -18,9 +18,6 @@ if (tarefasArmazenadas) {
     tarefas = JSON.parse(tarefasArmazenadas)
 }
 
-
-tarefas = JSON.parse(localStorage.getItem('tarefas'))
-
 function atualizarTarefas(){
     localStorage.setItem('tarefas',JSON.stringify(tarefas))
 }
