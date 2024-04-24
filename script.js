@@ -125,10 +125,13 @@ formAddTarefa.addEventListener('submit', (evento)=>{
     formAddTarefa.classList.add('hidden')
 })
 
-tarefas.forEach(tarefa => {
-    const elementoTarefa = criarElementoTarefa(tarefa)
-    ulTarefas.append(elementoTarefa)
-})
+if(tarefas){
+    tarefas.forEach(tarefa => {
+        const elementoTarefa = criarElementoTarefa(tarefa)
+        ulTarefas.append(elementoTarefa)
+    })
+
+}
 
 document.addEventListener('focoFinalizado',()=>{
 
